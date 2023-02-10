@@ -5,20 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link reel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link reel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Diseñador Freelancer</title>
 </head>
 
 <body>
     <header>
-        <h1>Christian Cruz Freeelancer</h1>
+        <h1 class="titulo">Christian Cruz <span>Freeelancer</span></h1>
     </header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Customers</a>
-        <a href="#">Contact</a>
-    </nav>
+    <div class="nav-bg">
+        <nav class="main-nav content">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Customers</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
 
     <img src="img/hero.jpg" alt="hero">
 
@@ -96,6 +103,30 @@
 
     <section>
         <h2>Contact</h2>
+        <form action="">
+            <fieldset>
+                <legend>Contact us by filling in all the fields</legend>
+                <div>
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Name">
+                </div>
+                <div>
+                    <label for="tel">Tel: </label>
+                    <input type="tel" name="tel" id="tel" placeholder="Tel">
+                </div>
+                <div>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <div>
+                    <label for="message">Message: </label>
+                    <textarea></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="send">
+                </div>
+            </fieldset>
+        </form>
     </section>
 
     <footer>
