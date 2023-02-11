@@ -2,43 +2,138 @@
     --white: #ffffff;
     --black: #212121;
     --primary: #ffc107;
-    --secundary: #0097a7;
+    --secundary: #1b2526;
     --gray: #757575;
-
-    --main-font: 3.8rem;
+    --faded: #fefeff47;
+    --bg-primary: rgba(0, 39, 193, 0.11);
+    --lightgray: #dfe9f3;
 }
-
+/*------------- GLOBALS--------*/
 html {
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 body {
     font-size: 16px; /*10px = 1rem*/
     font-family: 'Krub', sans-serif;
+    background: linear-gradient(to top, var(--lightgray) 0%, var(--white) 100%);
 }
 
-.titulo {
-    text-align: center;
-    font-size: var(--main-font);
-    
+.content {
+    max-width: 120rem;
+    margin: 0 auto;/*you find in the nav*/
 }
+.buttom {
+    background-color: var(--faded);
+    color: var(--white);
+    padding: 1rem 3rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-radius: .5rem;
+    text-align: center;
+    width: 80%;
+}
+@media (min-width: 768px) {
+    .buttom {
+        width: auto; 
+    }
+}
+.shadow {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(71,71,71,0.36);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(71,71,71,0.36);
+    box-shadow: 0px 5px 15px 0px rgba(71,71,71,0.36);
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: .5rem;
+}
+/*----typography----*/
+h1 {
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+/*--------- titles ---------*/
 .titulo span {
     font-size: 2rem;
 }
 
-
-.content {
-    width: 120rem;
-    margin: 0 auto;
-}
+/*-----------start the nav------*/
 .nav-bg {
     background-color: var(--secundary);
 }
 .main-nav {
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
+    display: flex;  
+    flex-direction: column; /*my web started in column change horizontal with the media*/
+}
+@media (min-width: 768px) {
+    .main-nav {
+        flex-direction: row;
+        justify-content: space-between; /*I put here because need the row*/
+    }
 }
 .main-nav a {
+    display: block;
+    text-align: center; /*both is ok or also 
+    display: column;
+    align-items: center;*/
     color: var(--white);
     text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+.main-nav a:hover { /*changes when pointer is above*/
+    background-color: var(--faded);
+    color: var(--primary);
+}
+
+/*-------------------start hero*/
+.hero {
+    /*
+    If you wanted to go out for the css, you only need to set ../selectfolder/selectfile  
+    it's all, good luck!!!!
+     */
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /*
+    adjust the size of the image*/
+    height: 450px; 
+    /*padding: 20px; I adjust the separation above*/
+    position: relative;/* the father always have "relative" for the child have position "absolute" */
+    margin-bottom: 2rem;
+}
+.content-hero {
+    position: absolute;
+    background-color: rgba(68, 68, 68, 0.18);
+    background-color: rgba(68 68 68 / 18%);
+    /*
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    or
+    */
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;/*cuando quiera alinear todo tanto vertical como horizontalmente*/
+}
+.content-hero h2 , .content-hero p {
+    color: var(--white);
 }
