@@ -45,8 +45,10 @@ body {
     }
 }
 .shadow {
+    /* should not be used now
     -webkit-box-shadow: 0px 5px 15px 0px rgba(71,71,71,0.36);
     -moz-box-shadow: 0px 5px 15px 0px rgba(71,71,71,0.36);
+    */
     box-shadow: 0px 5px 15px 0px rgba(71,71,71,0.36);
     background-color: var(--white);
     padding: 2rem;
@@ -81,7 +83,7 @@ h1, h2, h3 {
 @media (min-width: 768px) {
     .main-nav {
         flex-direction: row;
-        justify-content: space-between; /*I put here because need the row*/
+        justify-content: space-evenly; /*I put here because need the row*/
     }
 }
 .main-nav a {
@@ -100,7 +102,7 @@ h1, h2, h3 {
     color: var(--primary);
 }
 
-/*-------------------start hero*/
+/*-------------------start hero-------------------*/
 .hero {
     /*
     If you wanted to go out for the css, you only need to set ../selectfolder/selectfile  
@@ -136,4 +138,34 @@ h1, h2, h3 {
 }
 .content-hero h2 , .content-hero p {
     color: var(--white);
+}
+@media (min-width: 768px) {
+    .services{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem
+    } 
+}
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.service h3 {
+    color: var(--gray);
+    font-weight: 400;
+}
+.service p {
+    text-align: center;
+    line-height: 2;
+}
+.service .icons {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+    /* Centro horizontal y verticalmente */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
