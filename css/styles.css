@@ -16,7 +16,7 @@ html {
 }
 
 /* scroll */
-/* si solo tiene services no se mueve a nav ni form por eso los agregue */
+/* si solo tiene services no se mueve a nav ni form por eso los agregue y se detiene en cada seccion*/
 .services, .main-nav, .form{
     scroll-snap-align: center;
     scroll-snap-stop: always;
